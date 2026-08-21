@@ -643,3 +643,170 @@ body {
         display: none;
     }
 }
+
+/* Enhanced Mobile Responsive */
+@media (max-width: 968px) {
+    /* Mobile Navigation */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--color-primary);
+    }
+    
+    /* Hero */
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 6rem var(--spacing-sm) 3rem;
+        gap: var(--spacing-md);
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    /* Sections */
+    .section {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    /* Grids */
+    .vision-grid,
+    .architecture-content,
+    .investment-grid,
+    .services-matrix {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Journey Tabs */
+    .journey-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+    }
+    
+    .journey-tab {
+        white-space: nowrap;
+        padding: var(--spacing-sm);
+        font-size: 0.875rem;
+    }
+    
+    /* Journey Steps */
+    .journey-step {
+        flex-direction: column;
+        padding: var(--spacing-sm);
+    }
+    
+    .step-marker {
+        font-size: 1.25rem;
+    }
+    
+    /* Investment */
+    .terms-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xs);
+    }
+    
+    .term-percent {
+        font-size: 1.25rem;
+    }
+    
+    .investment-amount {
+        font-size: 1.25rem;
+    }
+    
+    /* Steps */
+    .step-item {
+        flex-direction: column;
+        padding: var(--spacing-sm);
+    }
+    
+    .step-number {
+        font-size: 1.5rem;
+    }
+    
+    /* Buttons */
+    .btn-download {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .btn-download.large {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Contact */
+    .contact-details {
+        font-size: 0.875rem;
+    }
+}
+
+/* Small Mobile (under 480px) */
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 3rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .vision-item .icon {
+        font-size: 1.5rem;
+    }
+    
+    .diagram-container {
+        display: none; /* Hide complex diagram on very small screens */
+    }
+}
+
+/* Add to HTML - Mobile Menu Toggle */

@@ -12,21 +12,24 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="nav-brand">J&J Logistics</div>
-            <div class="nav-links">
-                <a href="#vision">Vision</a>
-                <a href="#architecture">Architecture</a>
-                <a href="#journeys">User Flows</a>
-                <a href="#services">Services</a>
-                
-                <button class="btn-download" onclick="downloadPDF()">
-                    <i class="fas fa-download"></i> Download PDF
-                </button>
-            </div>
+  <nav class="nav">
+    <div class="nav-container">
+        <div class="nav-brand">J&J Logistics</div>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="#vision" onclick="closeMobileMenu()">Vision</a>
+            <a href="#architecture" onclick="closeMobileMenu()">Architecture</a>
+            <a href="#journeys" onclick="closeMobileMenu()">User Flows</a>
+            <a href="#services" onclick="closeMobileMenu()">Services</a>
+            <!-- <a href="#investment" onclick="closeMobileMenu()">Investment</a> -->
+            <button class="btn-download" onclick="downloadPDF()">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Hero -->
     <header class="hero">
