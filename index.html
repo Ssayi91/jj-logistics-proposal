@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J&J Logistics Digital Platform Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">J&J Logistics</div>
+            <div class="nav-links">
+                <a href="#vision">Vision</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#journeys">User Flows</a>
+                <a href="#services">Services</a>
+                <a href="#investment">Investment</a>
+                <button class="btn-download" onclick="downloadPDF()">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-label">Digital Transformation Proposal</p>
+            <h1>Unified Platform for<br>China-Africa Trade</h1>
+            <p class="hero-subtitle">A comprehensive digital ecosystem integrating 16 services across sourcing, logistics, business support, and travel facilitation</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">16</span>
+                    <span class="stat-label">Services</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">User Roles</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Weeks</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="diagram-container">
+                <svg viewBox="0 0 600 400" class="architecture-diagram">
+                    <!-- Client Layer -->
+                    <g class="layer">
+                        <rect x="150" y="50" width="300" height="60" class="diagram-box primary"/>
+                        <text x="300" y="85" class="diagram-text">Client Portal & Mobile Access</text>
+                    </g>
+                    <!-- Connection Lines -->
+                    <line x1="300" y1="110" x2="300" y2="140" class="connection-line"/>
+                    <!-- Service Layer -->
+                    <g class="layer">
+                        <rect x="100" y="140" width="180" height="50" class="diagram-box"/>
+                        <text x="190" y="170" class="diagram-text small">Sourcing</text>
+                        
+                        <rect x="320" y="140" width="180" height="50" class="diagram-box"/>
+                        <text x="410" y="170" class="diagram-text small">Logistics</text>
+                    </g>
+                    <!-- Connection Lines -->
+                    <line x1="190" y1="190" x2="190" y2="220" class="connection-line"/>
+                    <line x1="410" y1="190" x2="410" y2="220" class="connection-line"/>
+                    <!-- Backend Layer -->
+                    <g class="layer">
+                        <rect x="50" y="220" width="280" height="50" class="diagram-box secondary"/>
+                        <text x="190" y="250" class="diagram-text small">Admin Panel & Management</text>
+                        
+                        <rect x="370" y="220" width="180" height="50" class="diagram-box secondary"/>
+                        <text x="460" y="250" class="diagram-text small">Database</text>
+                    </g>
+                    <!-- Integration -->
+                    <line x1="300" y1="270" x2="300" y2="300" class="connection-line"/>
+                    <rect x="200" y="300" width="200" height="50" class="diagram-box accent"/>
+                    <text x="300" y="330" class="diagram-text small">M-Pesa & WhatsApp Integration</text>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Vision Section -->
+    <section id="vision" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Vision</span>
+                <h2>Digital Ecosystem Architecture</h2>
+            </div>
+            <div class="vision-grid">
+                <div class="vision-item">
+                    <i class="fas fa-layer-group icon"></i>
+                    <h3>Unified Platform</h3>
+                    <p>Single access point for all 16 services with seamless navigation and integrated payment systems</p>
+                </div>
+                <div class="vision-item">
+                    <i class="fas fa-shield-alt icon"></i>
+                    <h3>Role-Based Access</h3>
+                    <p>Four-tier permission structure ensuring data security and operational efficiency</p>
+                </div>
+                <div class="vision-item">
+                    <i class="fas fa-bolt icon"></i>
+                    <h3>Real-Time Operations</h3>
+                    <p>Live tracking, instant notifications, and WhatsApp-first communication</p>
+                </div>
+                <div class="vision-item">
+                    <i class="fas fa-chart-line icon"></i>
+                    <h3>Revenue Generation</h3>
+                    <p>Monetized supplier database with pay-per-contact and subscription models</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture" class="section alt">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">System Design</span>
+                <h2>Platform Architecture</h2>
+            </div>
+            <div class="architecture-content">
+                <div class="arch-column">
+                    <h3>Public Layer</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Service catalog with detailed descriptions</li>
+                        <li><i class="fas fa-check"></i> Product catalogue browsing</li>
+                        <li><i class="fas fa-check"></i> Supplier directory preview</li>
+                        <li><i class="fas fa-check"></i> Resource library & documentation</li>
+                        <li><i class="fas fa-check"></i> SEO-optimized content structure</li>
+                    </ul>
+                </div>
+                <div class="arch-column">
+                    <h3>Client Portal</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Personalized dashboard</li>
+                        <li><i class="fas fa-check"></i> Sourcing request management</li>
+                        <li><i class="fas fa-check"></i> Paid supplier contact access</li>
+                        <li><i class="fas fa-check"></i> Shipment tracking & history</li>
+                        <li><i class="fas fa-check"></i> Multi-service booking system</li>
+                        <li><i class="fas fa-check"></i> Document repository</li>
+                    </ul>
+                </div>
+                <div class="arch-column">
+                    <h3>Admin System</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 4-tier role management</li>
+                        <li><i class="fas fa-check"></i> Supplier database administration</li>
+                        <li><i class="fas fa-check"></i> Payment verification & reporting</li>
+                        <li><i class="fas fa-check"></i> Analytics & business intelligence</li>
+                        <li><i class="fas fa-check"></i> Content management system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Journey -->
+    <section id="journeys" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Experience Design</span>
+                <h2>User Journey Flows</h2>
+            </div>
+            <div class="journey-container">
+                <div class="journey-tabs">
+                    <button class="journey-tab active" data-journey="sourcing">
+                        <i class="fas fa-search"></i> Product Sourcing
+                    </button>
+                    <button class="journey-tab" data-journey="shipping">
+                        <i class="fas fa-ship"></i> Shipping & Logistics
+                    </button>
+                    <button class="journey-tab" data-journey="database">
+                        <i class="fas fa-database"></i> Supplier Database
+                    </button>
+                </div>
+                
+                <div class="journey-content">
+                    <div class="journey-panel active" id="sourcing">
+                        <div class="journey-steps">
+                            <div class="journey-step">
+                                <div class="step-marker">01</div>
+                                <div class="step-content">
+                                    <h4>Registration & Authentication</h4>
+                                    <p>Client creates account with email verification and phone number validation</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">02</div>
+                                <div class="step-content">
+                                    <h4>Sourcing Request Submission</h4>
+                                    <p>Multi-step form capturing product specifications, quantity, budget, timeline, and reference materials</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">03</div>
+                                <div class="step-content">
+                                    <h4>Supplier Matching & Quotes</h4>
+                                    <p>J&J sourcing officers identify 3-5 verified suppliers and upload comparative quotes</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">04</div>
+                                <div class="step-content">
+                                    <h4>Order Facilitation</h4>
+                                    <p>Client selects preferred supplier, proceeds with payment, and J&J manages production oversight</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-panel" id="shipping">
+                        <div class="journey-steps">
+                            <div class="journey-step">
+                                <div class="step-marker">01</div>
+                                <div class="step-content">
+                                    <h4>Rate Calculation</h4>
+                                    <p>Real-time freight calculator based on dimensions, weight, origin, destination, and service type</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">02</div>
+                                <div class="step-content">
+                                    <h4>Booking & Documentation</h4>
+                                    <p>Digital submission of commercial invoice, packing list, and shipping instructions</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">03</div>
+                                <div class="step-content">
+                                    <h4>Payment Processing</h4>
+                                    <p>Secure M-Pesa STK push or card payment with instant confirmation</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">04</div>
+                                <div class="step-content">
+                                    <h4>End-to-End Tracking</h4>
+                                    <p>Real-time status updates from warehouse receipt through customs clearance to final delivery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-panel" id="database">
+                        <div class="journey-steps">
+                            <div class="journey-step">
+                                <div class="step-marker">01</div>
+                                <div class="step-content">
+                                    <h4>Directory Search</h4>
+                                    <p>Advanced filtering by product category, geographic location, manufacturer type, and verification status</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">02</div>
+                                <div class="step-content">
+                                    <h4>Preview & Evaluation</h4>
+                                    <p>Access to company profiles, product ranges, and verification badges without cost</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">03</div>
+                                <div class="step-content">
+                                    <h4>Contact Unlock</h4>
+                                    <p>Secure payment gateway integration for instant access to phone numbers, emails, and WeChat contacts</p>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="step-marker">04</div>
+                                <div class="step-content">
+                                    <h4>Direct Engagement</h4>
+                                    <p>One-click WhatsApp integration and supplier rating system for quality assurance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Matrix -->
+    <section id="services" class="section alt">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Service Integration</span>
+                <h2>Complete Service Portfolio</h2>
+            </div>
+            <div class="services-matrix">
+                <div class="service-category">
+                    <div class="category-header">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Sourcing & Supply Chain</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-row">
+                            <span class="service-name">Product Sourcing</span>
+                            <span class="service-meta">Request forms, supplier matching, quote comparison</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Supplier Database</span>
+                            <span class="service-meta">Paid contact access, verification system</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Market Tours</span>
+                            <span class="service-meta">Calendar booking, itinerary management</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Business Consultancy</span>
+                            <span class="service-meta">Scheduled consultations, video integration</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Warehousing</span>
+                            <span class="service-meta">Inventory management, storage calculator</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-category">
+                    <div class="category-header">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Logistics & Shipping</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-row">
+                            <span class="service-name">Air Cargo</span>
+                            <span class="service-meta">Rate calculator, booking, tracking (3-10 days)</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Sea Freight</span>
+                            <span class="service-meta">FCL/LCL options, container tracking (25-40 days)</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Customs Clearance</span>
+                            <span class="service-meta">Document processing, duty calculation</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Cargo Tracking</span>
+                            <span class="service-meta">Real-time updates, multi-channel notifications</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-category">
+                    <div class="category-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Business Support</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-row">
+                            <span class="service-name">Money Transfer</span>
+                            <span class="service-meta">KES-RMB exchange, M-Pesa integration</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Documentation</span>
+                            <span class="service-meta">Digital document generation & delivery</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Translation</span>
+                            <span class="service-meta">English/Swahili-Chinese, certified options</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Visa Invitations</span>
+                            <span class="service-meta">Online application, 5-7 day processing</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Outsourcing</span>
+                            <span class="service-meta">Project scoping, custom quotations</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-category">
+                    <div class="category-header">
+                        <i class="fas fa-plane"></i>
+                        <h3>Travel & Tourism</h3>
+                    </div>
+                    <div class="service-list">
+                        <div class="service-row">
+                            <span class="service-name">Airport Transfers</span>
+                            <span class="service-meta">Vehicle booking, flight tracking</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Medical Tourism</span>
+                            <span class="service-meta">Hospital partnerships, appointment booking</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Leisure Tours</span>
+                            <span class="service-meta">Package deals, group coordination</span>
+                        </div>
+                        <div class="service-row">
+                            <span class="service-name">Pilgrimage Travel</span>
+                            <span class="service-meta">Specialized packages, visa support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment -->
+    <!-- <section id="investment" class="section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Investment</span>
+                <h2>Project Phasing & Timeline</h2>
+            </div>
+            <div class="investment-grid">
+                <div class="investment-card">
+                    <div class="investment-header">
+                        <h3>Phase 1</h3>
+                        <span class="investment-duration">Weeks 1-10</span>
+                    </div>
+                    <div class="investment-amount">KES 930,000 - 1,460,000</div>
+                    <div class="investment-features">
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Client portal with authentication</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Sourcing request system</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Supplier database (basic)</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Product catalogue</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>M-Pesa payment integration</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>WhatsApp click-to-chat</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>4-role admin panel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="investment-card">
+                    <div class="investment-header">
+                        <h3>Phase 2</h3>
+                        <span class="investment-duration">Weeks 11-16</span>
+                    </div>
+                    <div class="investment-amount">KES 600,000 - 900,000</div>
+                    <div class="investment-features">
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Shipping booking system</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Market tours booking</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Visa application system</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Money transfer module</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Documentation orders</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced cargo tracking</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Email/SMS notifications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-terms">
+                <h4>Payment Structure</h4>
+                <div class="terms-grid">
+                    <div class="term">
+                        <span class="term-percent">40%</span>
+                        <span class="term-label">Project initiation</span>
+                    </div>
+                    <div class="term">
+                        <span class="term-percent">30%</span>
+                        <span class="term-label">Phase 1 midpoint</span>
+                    </div>
+                    <div class="term">
+                        <span class="term-percent">20%</span>
+                        <span class="term-label">Phase 1 completion</span>
+                    </div>
+                    <div class="term">
+                        <span class="term-percent">10%</span>
+                        <span class="term-label">Final delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Next Steps -->
+    <section class="section alt">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Engagement</span>
+                <h2>Next Steps</h2>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-details">
+                        <h4>Discovery Workshop</h4>
+                        <p>2-3 hour session to finalize requirements, map exact workflows, define staff roles, and gather content</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-details">
+                        <h4>Design & Approval</h4>
+                        <p>Wireframes and UI mockups for stakeholder review and iterative feedback</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-details">
+                        <h4>Development</h4>
+                        <p>Agile development with bi-weekly demos and weekly progress updates</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-details">
+                        <h4>Deployment & Training</h4>
+                        <p>Staff training across all 4 roles, client onboarding materials, and 30-day post-launch support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>Ready to proceed?</h3>
+                <p>Let's schedule a discovery session to finalize requirements and answer any questions.</p>
+                <div class="contact-details">
+                    <p><strong> Sonny Sayi Solutions</strong></p>
+                    <button class="website" onclick="window.open('https://sonny-sayi-solution.vercel.app', '_blank')">
+                        <i class="fas fa-globe"></i>
+                        <strong>sonny-sayi-solution.vercel.app</strong>
+                    </button>
+                    <p>WhatsApp: +254 736 194 051</p>
+                </div>
+                <button class="btn-download large" onclick="downloadPDF()">
+                    <i class="fas fa-download"></i> Download Proposal PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Confidential Proposal for J&J Logistics</p>
+            <p class="tagline">Dream • Create • Deliver</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
