@@ -23,7 +23,7 @@
             <a href="#architecture" onclick="closeMobileMenu()">Architecture</a>
             <a href="#journeys" onclick="closeMobileMenu()">User Flows</a>
             <a href="#services" onclick="closeMobileMenu()">Services</a>
-            <!-- <a href="#investment" onclick="closeMobileMenu()">Investment</a> -->
+            <a href="#investment" onclick="closeMobileMenu()">Investment</a>
             <button class="btn-download" onclick="downloadPDF()">
                 <i class="fas fa-download"></i> Download PDF
             </button>
@@ -409,113 +409,137 @@
     </section>
 
     <!-- Investment -->
-    <!-- <section id="investment" class="section">
+    <section id="investment" class="section">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-label">Investment</span>
-                <h2>Project Phasing & Timeline</h2>
+                <span class="section-label">Investment Options</span>
+                <h2>Scalable Packages for Your Growth</h2>
+                <p class="section-subtitle">Choose the package that aligns with your current operational capacity and budget. Upgrade seamlessly as your client base grows.</p>
             </div>
-            <div class="investment-grid">
-                <div class="investment-card">
-                    <div class="investment-header">
-                        <h3>Phase 1</h3>
-                        <span class="investment-duration">Weeks 1-10</span>
+            
+            <div class="pricing-grid">
+                <!-- Tier 1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Launch</h3>
+                        <span class="pricing-tag">Core Automation</span>
                     </div>
-                    <div class="investment-amount">KES 930,000 - 1,460,000</div>
-                    <div class="investment-features">
+                    <div class="pricing-amount">KES 150,000 - 250,000</div>
+                    <div class="pricing-desc">A fully functional digital platform with essential automation to start generating revenue immediately.</div>
+                    
+                    <div class="pricing-features">
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Client portal with authentication</span>
+                            <span>Complete Public Website (All 16 Services)</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Sourcing request system</span>
+                            <span>Simple Client Login & Dashboard</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Supplier database (basic)</span>
+                            <span>Basic Admin Panel for J&J Staff</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Product catalogue</span>
+                            <span>Supplier Directory (Pay-to-Unlock Logic)</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>M-Pesa payment integration</span>
+                            <span>Simple Automation (Auto-emails & WhatsApp links)</span>
                         </div>
-                        <div class="feature-row">
-                            <i class="fas fa-check"></i>
-                            <span>WhatsApp click-to-chat</span>
-                        </div>
-                        <div class="feature-row">
-                            <i class="fas fa-check"></i>
-                            <span>4-role admin panel</span>
+                        <div class="feature-row highlight">
+                            <i class="fas fa-info-circle"></i>
+                            <span><strong>Payment Flow:</strong> Clients send M-Pesa/Bank proof via WhatsApp. Admin manually unlocks contacts in the dashboard.</span>
                         </div>
                     </div>
+                    <div class="pricing-timeline">Timeline: 3 - 4 Weeks</div>
                 </div>
                 
-                <div class="investment-card">
-                    <div class="investment-header">
-                        <h3>Phase 2</h3>
-                        <span class="investment-duration">Weeks 11-16</span>
+                <!-- Tier 2 (Recommended) -->
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Recommended</div>
+                    <div class="pricing-header">
+                        <h3>Growth</h3>
+                        <span class="pricing-tag">Advanced Operations</span>
                     </div>
-                    <div class="investment-amount">KES 600,000 - 900,000</div>
-                    <div class="investment-features">
+                    <div class="pricing-amount">KES 350,000 - 500,000</div>
+                    <div class="pricing-desc">Removes manual bottlenecks with integrated payments and advanced staff management for scaling operations.</div>
+                    
+                    <div class="pricing-features">
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Shipping booking system</span>
+                            <span><strong>Everything in Launch, plus:</strong></span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Market tours booking</span>
+                            <span>Automated M-Pesa STK Push Integration</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Visa application system</span>
+                            <span>Instant Automated Contact Unlocking upon Payment</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Money transfer module</span>
+                            <span>Full 4-Role Admin Panel & Staff Management</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Documentation orders</span>
+                            <span>Basic Shipment Tracking (Staff updates status)</span>
                         </div>
                         <div class="feature-row">
                             <i class="fas fa-check"></i>
-                            <span>Advanced cargo tracking</span>
-                        </div>
-                        <div class="feature-row">
-                            <i class="fas fa-check"></i>
-                            <span>Email/SMS notifications</span>
+                            <span>Automated Email/SMS Notifications</span>
                         </div>
                     </div>
+                    <div class="pricing-timeline">Timeline: 6 - 8 Weeks</div>
+                </div>
+                
+                <!-- Tier 3 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Scale</h3>
+                        <span class="pricing-tag">Full Ecosystem</span>
+                    </div>
+                    <div class="pricing-amount">KES 850,000+</div>
+                    <div class="pricing-desc">For high-volume operations requiring full automation, advanced integrations, and comprehensive service booking.</div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span><strong>Everything in Growth, plus:</strong></span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>WhatsApp Business API (Automated Bots & Receipts)</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Full Service Booking Modules (Tours, Visas, Transfers)</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced Analytics & Business Intelligence Dashboard</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Progressive Web App (PWA) for Mobile Users</span>
+                        </div>
+                        <div class="feature-row">
+                            <i class="fas fa-check"></i>
+                            <span>Supplier Self-Registration Portal</span>
+                        </div>
+                    </div>
+                    <div class="pricing-timeline">Timeline: 12 - 16 Weeks</div>
                 </div>
             </div>
             
-            <div class="payment-terms">
-                <h4>Payment Structure</h4>
-                <div class="terms-grid">
-                    <div class="term">
-                        <span class="term-percent">40%</span>
-                        <span class="term-label">Project initiation</span>
-                    </div>
-                    <div class="term">
-                        <span class="term-percent">30%</span>
-                        <span class="term-label">Phase 1 midpoint</span>
-                    </div>
-                    <div class="term">
-                        <span class="term-percent">20%</span>
-                        <span class="term-label">Phase 1 completion</span>
-                    </div>
-                    <div class="term">
-                        <span class="term-percent">10%</span>
-                        <span class="term-label">Final delivery</span>
-                    </div>
-                </div>
+            <div class="upgrade-note">
+                <i class="fas fa-sync-alt"></i>
+                <p><strong>Seamless Upgrades:</strong> Start with the Launch package to validate your market. As your transaction volume increases, we can seamlessly upgrade your system to the Growth or Scale tiers without rebuilding from scratch.</p>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Next Steps -->
     <section class="section alt">

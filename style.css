@@ -7,11 +7,13 @@
 
 :root {
     --font-primary: 'Montserrat', sans-serif;
-    --color-primary: #0f172a;
+    --color-brand-deep: #0a0f0c;
+    --color-brand-surface: #111a14;
+    --color-primary: #0a0f0c;
     --color-secondary: #334155;
-    --color-accent: #3b82f6;
+    --color-accent: #10b981; /* Subtle emerald accent to complement your brand */
     --color-light: #f8fafc;
-    --color-gray: #94a3b8;
+    --color-gray: #64748b;
     --color-border: #e2e8f0;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -51,9 +53,14 @@ body {
 }
 
 .nav-brand {
-    font-weight: 600;
-    font-size: 1.125rem;
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 45px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
@@ -71,11 +78,11 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color-primary);
+    color: var(--color-brand-deep);
 }
 
 .btn-download {
-    background: var(--color-primary);
+    background: var(--color-brand-deep);
     color: white;
     border: none;
     padding: 0.625rem 1.25rem;
@@ -91,8 +98,19 @@ body {
 }
 
 .btn-download:hover {
-    background: var(--color-secondary);
+    background: var(--color-brand-surface);
     transform: translateY(-1px);
+}
+
+/* Mobile Menu Toggle - Hidden on Desktop by Default */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-brand-deep);
+    padding: 0.5rem;
 }
 
 /* Hero Section */
@@ -108,10 +126,10 @@ body {
 
 .hero-label {
     font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--color-gray);
+    font-weight: 600;
+    color: var(--color-accent);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: var(--spacing-xs);
 }
 
@@ -120,6 +138,7 @@ body {
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -2px;
+    color: var(--color-brand-deep);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -144,7 +163,7 @@ body {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-brand-deep);
     line-height: 1;
 }
 
@@ -152,6 +171,7 @@ body {
     font-size: 0.875rem;
     color: var(--color-gray);
     margin-top: 0.25rem;
+    font-weight: 500;
 }
 
 /* Diagram */
@@ -159,6 +179,7 @@ body {
     background: var(--color-light);
     border-radius: 8px;
     padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
 }
 
 .architecture-diagram {
@@ -173,11 +194,11 @@ body {
 }
 
 .diagram-box.primary {
-    fill: var(--color-primary);
+    fill: var(--color-brand-deep);
 }
 
 .diagram-box.secondary {
-    fill: var(--color-secondary);
+    fill: var(--color-brand-surface);
 }
 
 .diagram-box.accent {
@@ -197,7 +218,7 @@ body {
 }
 
 .connection-line {
-    stroke: var(--color-border);
+    stroke: var(--color-gray);
     stroke-width: 2;
     stroke-dasharray: 5,5;
 }
@@ -222,10 +243,10 @@ body {
 
 .section-label {
     font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--color-gray);
+    font-weight: 600;
+    color: var(--color-accent);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     display: block;
     margin-bottom: var(--spacing-xs);
 }
@@ -234,6 +255,7 @@ body {
     font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: -1px;
+    color: var(--color-brand-deep);
 }
 
 /* Vision Grid */
@@ -245,11 +267,20 @@ body {
 
 .vision-item {
     padding: var(--spacing-md);
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.vision-item:hover {
+    border-color: var(--color-brand-deep);
+    transform: translateY(-4px);
 }
 
 .vision-item .icon {
-    font-size: 2rem;
-    color: var(--color-primary);
+    font-size: 1.75rem;
+    color: var(--color-brand-deep);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -257,6 +288,7 @@ body {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: var(--spacing-xs);
+    color: var(--color-brand-deep);
 }
 
 .vision-item p {
@@ -272,10 +304,18 @@ body {
     gap: var(--spacing-md);
 }
 
+.arch-column {
+    background: white;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+
 .arch-column h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
+    color: var(--color-brand-deep);
 }
 
 .feature-list {
@@ -292,7 +332,7 @@ body {
 }
 
 .feature-list i {
-    color: var(--color-primary);
+    color: var(--color-accent);
     margin-top: 0.25rem;
     font-size: 0.75rem;
 }
@@ -316,7 +356,7 @@ body {
     font-family: var(--font-primary);
     font-size: 0.9375rem;
     font-weight: 500;
-    color: var(--color-secondary);
+    color: var(--color-gray);
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: var(--transition);
@@ -326,8 +366,8 @@ body {
 }
 
 .journey-tab.active {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
+    color: var(--color-brand-deep);
+    border-bottom-color: var(--color-brand-deep);
 }
 
 .journey-panel {
@@ -350,12 +390,13 @@ body {
     padding: var(--spacing-md);
     background: white;
     border: 1px solid var(--color-border);
+    border-radius: 8px;
 }
 
 .step-marker {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-gray);
+    color: var(--color-brand-deep);
     line-height: 1;
 }
 
@@ -363,6 +404,7 @@ body {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: var(--spacing-xs);
+    color: var(--color-brand-deep);
 }
 
 .step-content p {
@@ -380,6 +422,8 @@ body {
 .service-category {
     background: white;
     padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
 }
 
 .category-header {
@@ -393,12 +437,13 @@ body {
 
 .category-header i {
     font-size: 1.25rem;
-    color: var(--color-primary);
+    color: var(--color-brand-deep);
 }
 
 .category-header h3 {
     font-size: 1.125rem;
     font-weight: 600;
+    color: var(--color-brand-deep);
 }
 
 .service-list {
@@ -415,8 +460,9 @@ body {
 }
 
 .service-name {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9375rem;
+    color: var(--color-brand-deep);
 }
 
 .service-meta {
@@ -424,98 +470,157 @@ body {
     color: var(--color-gray);
 }
 
-/* Investment */
-.investment-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+/* Pricing Tiers */
+.section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-secondary);
+    max-width: 800px;
+    margin-top: var(--spacing-xs);
 }
 
-.investment-card {
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    align-items: start;
+}
+
+.pricing-card {
     background: white;
     padding: var(--spacing-md);
     border: 1px solid var(--color-border);
+    border-radius: 8px;
+    position: relative;
+    transition: var(--transition);
 }
 
-.investment-header {
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(10, 15, 12, 0.05);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--color-brand-deep);
+    box-shadow: 0 10px 30px rgba(10, 15, 12, 0.1);
+    transform: scale(1.02);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-brand-deep);
+    color: white;
+    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.pricing-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--spacing-sm);
 }
 
-.investment-header h3 {
+.pricing-header h3 {
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--color-brand-deep);
 }
 
-.investment-duration {
-    font-size: 0.875rem;
+.pricing-tag {
+    font-size: 0.75rem;
     color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
 }
 
-.investment-amount {
+.pricing-amount {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-sm);
+    color: var(--color-brand-deep);
+    margin-bottom: var(--spacing-xs);
 }
 
-.investment-features {
+.pricing-desc {
+    font-size: 0.9375rem;
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+.pricing-features {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
 }
 
 .feature-row {
     display: flex;
     align-items: flex-start;
     gap: var(--spacing-xs);
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     color: var(--color-secondary);
+    line-height: 1.4;
 }
 
 .feature-row i {
-    color: var(--color-primary);
-    margin-top: 0.25rem;
+    color: var(--color-accent);
+    margin-top: 0.2rem;
     font-size: 0.75rem;
 }
 
-.payment-terms {
-    background: white;
-    padding: var(--spacing-md);
-    border: 1px solid var(--color-border);
+.feature-row.highlight {
+    background: var(--color-light);
+    padding: var(--spacing-xs);
+    border-radius: 4px;
+    margin-top: var(--spacing-xs);
+    border-left: 3px solid var(--color-brand-deep);
 }
 
-.payment-terms h4 {
-    font-size: 1.125rem;
+.feature-row.highlight i {
+    color: var(--color-brand-deep);
+}
+
+.pricing-timeline {
+    text-align: center;
+    padding: var(--spacing-xs);
+    background: var(--color-light);
+    font-size: 0.875rem;
     font-weight: 600;
-    margin-bottom: var(--spacing-sm);
+    color: var(--color-brand-deep);
+    border-radius: 4px;
 }
 
-.terms-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.upgrade-note {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--color-brand-surface);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
     gap: var(--spacing-sm);
 }
 
-.term {
-    text-align: center;
-    padding: var(--spacing-sm);
-    background: var(--color-light);
-}
-
-.term-percent {
-    display: block;
+.upgrade-note i {
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
-.term-label {
-    font-size: 0.875rem;
-    color: var(--color-gray);
+.upgrade-note p {
+    font-size: 0.9375rem;
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Steps */
@@ -531,6 +636,8 @@ body {
     gap: var(--spacing-md);
     padding: var(--spacing-md);
     background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
 }
 
 .step-number {
@@ -544,6 +651,7 @@ body {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: var(--spacing-xs);
+    color: var(--color-brand-deep);
 }
 
 .step-details p {
@@ -554,31 +662,39 @@ body {
 /* CTA */
 .cta-section {
     text-align: center;
-    padding: var(--spacing-md);
-    background: white;
-    border: 1px solid var(--color-border);
+    padding: var(--spacing-lg);
+    background: var(--color-brand-deep);
+    color: white;
+    border-radius: 8px;
 }
 
 .cta-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: var(--spacing-xs);
 }
 
 .cta-section p {
-    color: var(--color-secondary);
+    color: var(--color-gray);
     margin-bottom: var(--spacing-sm);
 }
 
 .contact-details {
     margin: var(--spacing-sm) 0;
     font-size: 0.9375rem;
+    color: white;
 }
 
 .btn-download.large {
     padding: 1rem 2rem;
     font-size: 1rem;
     margin-top: var(--spacing-sm);
+    background: white;
+    color: var(--color-brand-deep);
+}
+
+.btn-download.large:hover {
+    background: var(--color-light);
 }
 
 /* Footer */
@@ -589,6 +705,19 @@ body {
     background: white;
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.footer-logo {
+    height: 30px;
+    width: auto;
+    opacity: 0.7;
+}
+
 .footer-content p {
     font-size: 0.875rem;
     color: var(--color-gray);
@@ -597,12 +726,13 @@ body {
 .footer .tagline {
     margin-top: var(--spacing-xs);
     font-style: italic;
+    font-size: 0.8rem;
 }
 
 /* Print Styles */
 @media print {
-    .nav, .btn-download {
-        display: none;
+    .nav, .btn-download, .mobile-menu-toggle {
+        display: none !important;
     }
     
     .hero {
@@ -615,6 +745,28 @@ body {
     
     body {
         font-size: 11pt;
+        color: #000;
+    }
+
+    /* Subtle Print Watermark/Footer */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #ccc;
+        padding: 10px 0;
+    }
+    
+    .cta-section {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    .upgrade-note {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact;
     }
 }
 
@@ -622,6 +774,8 @@ body {
 @media (max-width: 968px) {
     .hero {
         grid-template-columns: 1fr;
+        padding: 6rem var(--spacing-sm) 3rem;
+        gap: var(--spacing-md);
     }
     
     .hero h1 {
@@ -630,23 +784,16 @@ body {
     
     .vision-grid,
     .architecture-content,
-    .investment-grid,
+    .pricing-grid,
     .services-matrix {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
     
-    .terms-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .pricing-card.featured {
+        transform: none;
     }
     
-    .nav-links {
-        display: none;
-    }
-}
-
-/* Enhanced Mobile Responsive */
-@media (max-width: 968px) {
-    /* Mobile Navigation */
     .nav-links {
         display: none;
         position: absolute;
@@ -659,69 +806,17 @@ body {
         gap: var(--spacing-sm);
         border-bottom: 1px solid var(--color-border);
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 999;
     }
     
     .nav-links.active {
         display: flex;
     }
     
-    .nav-links a {
-        padding: var(--spacing-xs) 0;
-    }
-    
     .mobile-menu-toggle {
         display: block;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--color-primary);
     }
     
-    /* Hero */
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 6rem var(--spacing-sm) 3rem;
-        gap: var(--spacing-md);
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-        letter-spacing: -1px;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .hero-stats {
-        flex-wrap: wrap;
-        gap: var(--spacing-sm);
-    }
-    
-    .stat-number {
-        font-size: 2rem;
-    }
-    
-    /* Sections */
-    .section {
-        padding: var(--spacing-md) var(--spacing-sm);
-    }
-    
-    .section-header h2 {
-        font-size: 1.75rem;
-    }
-    
-    /* Grids */
-    .vision-grid,
-    .architecture-content,
-    .investment-grid,
-    .services-matrix {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-sm);
-    }
-    
-    /* Journey Tabs */
     .journey-tabs {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -734,58 +829,17 @@ body {
         font-size: 0.875rem;
     }
     
-    /* Journey Steps */
-    .journey-step {
+    .journey-step, .step-item {
         flex-direction: column;
         padding: var(--spacing-sm);
-    }
-    
-    .step-marker {
-        font-size: 1.25rem;
-    }
-    
-    /* Investment */
-    .terms-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-xs);
-    }
-    
-    .term-percent {
-        font-size: 1.25rem;
-    }
-    
-    .investment-amount {
-        font-size: 1.25rem;
-    }
-    
-    /* Steps */
-    .step-item {
-        flex-direction: column;
-        padding: var(--spacing-sm);
-    }
-    
-    .step-number {
-        font-size: 1.5rem;
-    }
-    
-    /* Buttons */
-    .btn-download {
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
     }
     
     .btn-download.large {
         width: 100%;
         justify-content: center;
     }
-    
-    /* Contact */
-    .contact-details {
-        font-size: 0.875rem;
-    }
 }
 
-/* Small Mobile (under 480px) */
 @media (max-width: 480px) {
     :root {
         --spacing-md: 1.5rem;
@@ -800,13 +854,7 @@ body {
         font-size: 1.5rem;
     }
     
-    .vision-item .icon {
-        font-size: 1.5rem;
-    }
-    
     .diagram-container {
-        display: none; /* Hide complex diagram on very small screens */
+        display: none;
     }
 }
-
-/* Add to HTML - Mobile Menu Toggle */
